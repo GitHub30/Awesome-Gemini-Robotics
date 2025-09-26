@@ -133,7 +133,7 @@ Great for **affordance-aware placement** after task completion. ([Google Develop
 
 ### 5) **Trash sorting by local rules** (tool use + spatial grounding) 🧩
 
-![Bins scene](assets/trash_bins.jpg)
+https://github.com/user-attachments/assets/503b20d6-1995-4e71-9164-9a79d6bf6a4c
 
 **Prompt**
 
