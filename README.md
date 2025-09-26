@@ -150,8 +150,6 @@ ER 1.5 can **call tools** (e.g., Google Search) and output **interleaved text + 
 
 ### 6) **Re-organize my desk** from a reference photo (long-horizon plan) 🧩
 
-![Desk reorg](assets/desk_reorg.jpg)
-
 **Prompt**
 
 ```
