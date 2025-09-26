@@ -59,6 +59,123 @@ This mirrors Google’s official robotics overview (points, trajectories, orches
 
 > ✅ = includes a public demo image from Google’s docs/blog • 🧩 = bring your own image (placeholder path)
 
+### 1) Pointing to Undefined Objects
+
+<img width="801" height="598" alt="image" src="https://github.com/user-attachments/assets/35881c79-922e-43dd-9d1c-b22e4f66715d" />
+
+**Prompt**
+
+```
+Point to no more than 10 items in the image. The label returned should be an identifying name for the object detected.
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Pointing to Defined Objects
+
+<img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/8bf517fa-a094-40c9-be65-6c7bedfde295" />
+
+**Prompt**
+
+```
+Get all points matching the following objects: bread, starfruit, banana. The label returned should be an identifying name for the object detected.
+The answer should follow the json format: [{{"point": <point>, "label": <label1>}}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Point to all instances of an object based on more abstract description (e.g. "fruit")
+
+<img width="798" height="597" alt="image" src="https://github.com/user-attachments/assets/974995c1-9a92-4c04-9e89-3bcbefdd22d8" />
+
+**Prompt**
+
+```
+Get all points for fruit. The label returned should be an identifying name for the object detected.
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Point to all instances of an object
+
+<img width="799" height="450" alt="image" src="https://github.com/user-attachments/assets/93382594-8156-43ff-9864-aa627346b2ae" />
+
+**Prompt**
+
+```
+Get all points matching game board slot. The label returned should be an identifying name for the object detected.
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+```
+Get all points matching X game piece. The label returned should be an identifying name for the object detected.
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Pointing to certain parts of an object in serial
+
+<img width="795" height="592" alt="image" src="https://github.com/user-attachments/assets/68c6bd2f-a064-43e4-bee3-a377a33d73c7" />
+
+**Prompt**
+
+```
+queries = [
+    ("paper bag", "handles"),
+    ("banana", "the stem"),
+    ("banana", "center"),
+    ("starfruit", "center"),
+    ("lime", "center"),
+    ("light blue bowl", "rim"),
+    ("dark blue bowl", "rim"),
+    ("measuring cup", "rim"),
+    ("measuring cup", "handle"),
+    ("bowl", "tomato"),
+]
+
+Point to the $part of the $object in the image. Return the answer as a json list of a dictionary with keys "point" and "label". Only return one point for this request
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Counting by Pointing
+
+<img width="793" height="820" alt="image" src="https://github.com/user-attachments/assets/2592ca4e-c1a9-4510-a251-c63dbbeaa52d" />
+
+**Prompt**
+
+```
+Point to each washer in the box.
+Return the answer in the format: [{"point": <point>, "label": <label1>}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Pointing to Defined Objects in a GIF
+
+![ダウンロード (1)](https://github.com/user-attachments/assets/635a748f-eae9-44c3-88b8-31627eec0ed8)
+
+**Prompt**
+
+```
+queries = [
+    "pen (on desk)",
+    "pen (in robot hand)",
+    "laptop (opened)",
+    "laptop (closed)",
+]
+
+Point to the following objects in the provided image: {', '.join(queries)}.
+The answer should follow the json format: [{{"point": <point>, "label": <label1>}}, ...].
+The points are in [y, x] format normalized to 0-1000.
+If no objects are found, return an empty JSON list [].
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
 ### 1) Kitchen scene: **Point-and-name objects** (2D points) ✅
 
 ![Kitchen pointing](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/unnamed-2_2.original.png)
