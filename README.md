@@ -176,6 +176,335 @@ If no objects are found, return an empty JSON list [].
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
+### 1) 2D Bounding boxes
+
+<img width="794" height="597" alt="image" src="https://github.com/user-attachments/assets/afaa8594-e682-4aaa-aa4c-62c468a66e49" />
+
+
+**Prompt**
+
+```
+Return bounding boxes as a JSON array with labels. Never return masks or code fencing. Limit to 25 objects. Include as many objects as you can identify on the table.
+If an object is present multiple times, name them according to their unique characteristic (colors, size, position, unique characteristics, etc..).
+The format should be as follows: [{"box_2d": [ymin, xmin, ymax, xmax], "label": <label for the object>}] normalized to 0-1000. The values in box_2d must only be integers
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Simple Trajectory Planning
+
+<img width="794" height="444" alt="image" src="https://github.com/user-attachments/assets/5c2f94dc-9b08-4e2b-b1d3-58ca55c6fb51" />
+
+**Prompt**
+
+```
+Place a point on the red pen, then 15 points for the trajectory of moving the red pen to the top of the organizer on the left.
+The points should be labeled by order of the trajectory, from '0' (start point at left hand) to <n> (final point)
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...].
+The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Path for Brushing Particles
+
+<img width="792" height="592" alt="image" src="https://github.com/user-attachments/assets/855c0a41-29f7-4d3b-a774-c22e4d726ac4" />
+
+**Prompt**
+
+```
+Point to the the blue brush and a list of 10 points covering the region of particles.
+Ensure that the points are spread evenly over the particles to create a smooth trajectory.
+Label the points from 1 to 10 based on the order that they should be approached in the trajectory of cleaning the plate.
+Movement should start from the brush.
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...].
+The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Obstacle-avoidance trajectory planning
+
+<img width="801" height="743" alt="image" src="https://github.com/user-attachments/assets/53cfab6e-db07-4eb7-b325-27d60da55eee" />
+
+**Prompt**
+
+```
+Find the most direct collision-free trajectory of 10 points on the floor between the current view origin and the green ottoman in the back left. The points should avoid all other obstacles on the floor.
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...].
+The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Item to remove to make room for laptop
+
+<img width="795" height="598" alt="image" src="https://github.com/user-attachments/assets/70a17400-d409-4ec9-8c23-4a2595f528ec" />
+
+**Prompt**
+
+```
+Point to the object that I need to remove to make room for my laptop
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Orchestrating: Packing a Lunch
+
+<img width="1207" height="855" alt="image" src="https://github.com/user-attachments/assets/aab2f569-99fe-4d7e-ae34-159655729a59" />
+
+**Prompt**
+
+```
+Explain how to pack the lunch box and lunch bag. Point to each object that you refer to. Each point should be in the format: [{"point": [y, x], "label": }], where the coordinates are normalized between 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Empty electrical sockets
+
+<img width="792" height="938" alt="image" src="https://github.com/user-attachments/assets/469d73df-3b01-48d6-b1f5-e39b62aa5133" />
+
+**Prompt**
+
+```
+Point to the unobstructed empty sockets
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Limiting item lift (3LB limit)
+
+<img width="792" height="954" alt="image" src="https://github.com/user-attachments/assets/a45216e1-cac7-4217-b51e-98d0d23e8754" />
+
+**Prompt**
+
+```
+I am a robot with a payload of 3LBs. Point to all the objects in the image I am physically able to pick up.
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...]. The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Video Analysis
+
+https://github.com/user-attachments/assets/cc2b3c62-2ce6-4c7b-bcf8-968f000e37f5
+
+**Prompt**
+
+```
+Describe in detail each step of finishing the task. Breaking it down by timestamp, output in json format with keys "start_timestamp", "end_timestamp" and "description".
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Video Analysis: Time Range
+
+```py
+conversation_history = [
+    {
+        'role': 'user',
+        'parts': [{'text': prompt}]
+    },
+    {
+        'role': 'model',
+        'parts': [{'text': response.text}]
+    }
+]
+
+chat = client.chats.create(
+    model=MODEL_ID,
+    history=conversation_history
+)
+
+prompt = """
+zoom into second 15 to 22 and provide a per-second breakdown of what is happening in the same format.
+"""
+
+start_time = time.time()
+
+response = chat.send_message(
+    [prompt, myfile]
+)
+
+end_time = time.time()
+elapsed_time = end_time - start_time
+print(f"\nTotal processing time: {elapsed_time:.4f} seconds")
+
+print(response.text)
+```
+
+Total processing time: 11.4140 seconds
+```json
+[
+  {
+    "start_timestamp": "00:15",
+    "end_timestamp": "00:16",
+    "description": "The left robotic arm begins moving from its position above the table towards the blue pen."
+  },
+  {
+    "start_timestamp": "00:16",
+    "end_timestamp": "00:18",
+    "description": "The left robotic arm positions its gripper directly over the blue pen on the table."
+  },
+  {
+    "start_timestamp": "00:18",
+    "end_timestamp": "00:19",
+    "description": "The left robotic arm lowers its gripper and grasps the blue pen."
+  },
+  {
+    "start_timestamp": "00:19",
+    "end_timestamp": "00:20",
+    "description": "The left robotic arm lifts the blue pen off the surface of the table."
+  },
+  {
+    "start_timestamp": "00:20",
+    "end_timestamp": "00:21",
+    "description": "The left robotic arm moves the blue pen towards the center of the table, positioning it above the black mesh pen holder."
+  },
+  {
+    "start_timestamp": "00:21",
+    "end_timestamp": "00:22",
+    "description": "The left robotic arm releases the blue pen, dropping it into the black mesh pen holder."
+  }
+]
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Finding the fourth row of shelves
+
+<img width="794" height="922" alt="image" src="https://github.com/user-attachments/assets/f7d26839-67a8-4215-b23d-e3eeb89ff11e" />
+
+**Prompt**
+
+```
+Return bounding boxes as a JSON array with labels highlighting all cubbies in the fourth row of shelves.
+The format should be as follows: [{"box_2d": [ymin, xmin, ymax, xmax], "label": <label for the object>}] normalized to 0-1000. The values in box_2d must only be integers
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Finding shelves with specific items
+
+<img width="794" height="942" alt="image" src="https://github.com/user-attachments/assets/95baca11-e7aa-485c-a927-0e392d9f6390" />
+
+**Prompt**
+
+```
+"I need to blow my nose."
+Find the cubby that can help.
+The format should be as follows: [{"box_2d": [ymin, xmin, ymax, xmax], "label": <label for the object>}] normalized to 0-1000. The values in box_2d must only be integers
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Counting items with thinking
+
+<img width="960" height="600" alt="image" src="https://github.com/user-attachments/assets/d902b60a-006e-406a-8641-611240dd9f87" />
+
+**Output**
+
+```
+Based on a visual inspection of the shopping cart basket in the foreground of the image, there are **8 items** inside.
+
+Here is the reasoning for the count:
+
+1.  **Stacked Boxes:** There is a stack of several boxes on the left side of the basket. We can clearly identify at least five boxes in this stack:
+    *   A blue Barilla pasta box at the bottom left.
+    *   A yellow Wheat Thins box next to the Barilla box.
+    *   At least three more boxes stacked above these two, partially visible.
+2.  **Cans:** There are two silver cans visible at the bottom right of the basket.
+3.  **Packet:** There is one small blue packet located in the center of the basket, between the boxes and the cans.
+```
+
+**Prompt**
+
+```
+How many items are inside of the cart basket. Please share your reasoning.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Finding shelves with specific items
+
+| ![initial_state_1](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/initial_state_1.png) | ![initial_state_2](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/initial_state_2.png) | ![initial_state_3](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/initial_state_3.png) | ![initial_state_4](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/initial_state_4.png) |
+|---|---|---|---|
+| ![current_state_1](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/current_state_1.png) | ![current_state_2](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/current_state_2.png) | ![current_state_3](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/current_state_3.png) | ![current_state_4](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/current_state_4.png) |
+
+
+**Output**
+
+Success? No
+
+**Prompt**
+
+```
+For this task, you will see a robot or human trying to perform the task of putting the mango into the brown container.
+You may see multiple camera views of the same scene. Some cameras are static
+and are mounted outside of the scene and some cameras are mounted on the robot arms
+and thus they are moving during the episode. The first 4 images show multiple
+camera views from the start of the episode (some time ago). The last 4 images show
+multiple camera views from the current moment in the episode (as it is now).
+Looking at these images and comparing the start of the episode with current state did
+the robot successfully perform the task "put the mango into the brown container"?
+Answer only with (1) yes or (2) no. Return the number (1) or (2) that best answers the question.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Zooming in on sections of an image for better readings
+
+<img width="794" height="959" alt="image" src="https://github.com/user-attachments/assets/338a9381-8f71-4f61-a378-a57a9bc64f75" />
+
+**Prompt**
+
+```
+What is the air quality reading? Using the code execution feature, zoom in on the image to take a closer look.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Segmentation with robot gripper and item
+
+<img width="796" height="456" alt="image" src="https://github.com/user-attachments/assets/09403f45-f6e7-4fd1-8390-4614e3481e3a" />
+
+**Prompt**
+
+```
+Provide the segmentation masks for the following objects in this image: mango, left robot gripper finger, right robot gripper finger.
+The answer should follow the JSON format:
+[
+  {
+    "box_2d": [ymin, xmin, ymax, xmax],
+    "label": "<label for the object>",
+    "mask": "data:image/png;base64,<base64 encoded PNG mask>"
+  },
+  ...
+]
+The box_2d coordinates should be normalized to 0-1000 and must be integers.
+The mask should be a base64 encoded PNG image where non-zero pixels indicate the mask.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
+### 1) Locate relevant objects
+
+<img width="793" height="504" alt="image" src="https://github.com/user-attachments/assets/69d4df26-a15d-4fcb-8ad7-d0b0cf9889b5" />
+
+**Prompt**
+
+```
+Locate and point to the blue block and the orange bowl. The label
+returned should be an identifying name for the object detected.
+The answer should follow the json format: [{"point": <point>, "label": <label1>}, ...].
+The points are in [y, x] format normalized to 0-1000.
+```
+
+https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
+
 ### 1) Kitchen scene: **Point-and-name objects** (2D points) ✅
 
 ![Kitchen pointing](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/unnamed-2_2.original.png)
