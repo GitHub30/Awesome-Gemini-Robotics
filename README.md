@@ -197,7 +197,7 @@ Outputs a **multi-step plan** plus points you can render or convert into pick-an
 
 ### 9) **Pick-and-place via your robot API** (function-calling) 🧩
 
-![Blocks & bowl](assets/block_bowl.jpg)
+![Blocks & bowl](https://ai.google.dev/gemini-api/docs/images/robotics/robot-api-example.png)
 
 **Prompt**
 
