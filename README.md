@@ -218,7 +218,7 @@ Docs show this pattern end-to-end (detect → plan → call your API). ([Google 
 
 ### 10) **Move the red pen to the organizer** (trajectory planning) 🧩
 
-![Pen trajectory](assets/pen_trajectory.jpg)
+![Pen trajectory](https://ai.google.dev/gemini-api/docs/images/robotics/trajectories.png)
 
 **Prompt**
 
