@@ -233,7 +233,8 @@ Great for **teaching-by-trajectory** and downstream spline fitting / time-parame
 
 ### 11) **Laundry sorting by color** (multi-level thinking) 🧩
 
-![Laundry bins](assets/laundry_color.jpg)
+[![](https://i.imgur.com/2fqyZh6.png)](https://www.youtube.com/watch?v=eDyXEh8XqjM&t=34s)
+
 
 **Prompt**
 
