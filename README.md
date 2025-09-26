@@ -165,7 +165,7 @@ Demonstrates **agentic planning** with **spatial grounding** over many steps. ([
 
 ### 7) **Make room for a laptop** (choose what to move) 🧩
 
-![Make room](assets/make_room_laptop.jpg)
+![Make room](https://ai.google.dev/gemini-api/docs/images/robotics/spatial-reasoning.png)
 
 **Prompt**
 
