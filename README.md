@@ -250,7 +250,6 @@ Official blog explains how Robotics 1.5/ER 1.5 think at task/subtask/micro-actio
 
 ### 12) **Payload-aware pick** (safety & constraints) 🧩
 
-![Payload check](assets/payload_limit.jpg)
 
 **Prompt**
 
