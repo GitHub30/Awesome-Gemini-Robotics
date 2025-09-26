@@ -1,7 +1,3 @@
-指定されたURLのコンテンツをベトナム語に翻訳しました。これをコピーして、`README_vn.md`というファイル名で保存してください。
-
----
-
 <div align="center">
 <img width="3334" height="992" alt="image" src="https://github.com/user-attachments/assets/32195746-89c3-4e33-a93d-00a7f0642f79" />
 
