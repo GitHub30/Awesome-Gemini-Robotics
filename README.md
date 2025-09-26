@@ -337,6 +337,21 @@ DeepMind highlights generalization across embodiments (e.g., ALOHA-2 → Apollo/
 > `https://github.com/GitHub30/Awesome-Gemini-Robotics/blob/main/README.md`
 > and start adding your own screenshots under `assets/` to replace 🧩 placeholders.
 
+## 🙏 Acknowledge
+
+The various cases in this repository rely on sharing from the AI community. Please allow us to express our sincere gratitude to all case contributors.
+
+Thank you to the following users for sharing their amazing works. You can also visit their profiles to learn more:
+
+- [@GoogleDeepMind](https://x.com/GoogleDeepMind)
+- [@GeminiApp](https://x.com/GeminiApp)
+
+*We cannot guarantee that all cases come from the original authors. If this causes you any inconvenience, please feel free to contact us for modifications.*
+
+The cases we collect cannot cover all possible application scenarios. If you have other interesting discoveries 🔍, we welcome you to contact us to showcase more creativity 📧!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=GitHub30/Awesome-Gemini-Robotics&type=Date)](https://www.star-history.com/#GitHub30/Awesome-Gemini-Robotics&Date)
+
 [1]: https://developers.googleblog.com/en/building-the-next-generation-of-physical-agents-with-gemini-robotics-er-15/ "Building the Next Generation of Physical Agents with Gemini Robotics-ER 1.5 - Google Developers Blog"
 [2]: https://ai.google.dev/gemini-api/docs/robotics-overview "Gemini Robotics-ER 1.5  |  Gemini API  |  Google AI for Developers"
 [3]: https://blog.google/intl/ja-jp/company-news/technology/gemini-robotics-15-ai/ "Gemini Robotics 1.5 を発表、AI エージェントを物理世界に"
