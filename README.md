@@ -2,6 +2,11 @@
 <img width="3334" height="992" alt="image" src="https://github.com/user-attachments/assets/32195746-89c3-4e33-a93d-00a7f0642f79" />
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![English](https://img.shields.io/badge/English-Click_to_View-yellow)](README.md)
+[![Chinese](https://img.shields.io/badge/汉语-撳一下就可以睇到-orange)](README_zh.md)
+[![Japanese](https://img.shields.io/badge/日本語-クリックして表示-green)](README_ja.md)
+[![Korean](https://img.shields.io/badge/한국어-눌러서_보기-blue)](README_kr.md)
+[![Vietnamese](https://img.shields.io/badge/tiếng Việt-Nhấp để xem-blueviolet)](README_vn.md)
 </div>
 
 # Awesome Gemini Robotics
