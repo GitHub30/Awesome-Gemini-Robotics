@@ -6,7 +6,7 @@
 [![Chinese](https://img.shields.io/badge/汉语-撳一下就可以睇到-orange)](README_zh.md)
 [![Japanese](https://img.shields.io/badge/日本語-クリックして表示-green)](README_ja.md)
 [![Korean](https://img.shields.io/badge/한국어-눌러서_보기-blue)](README_kr.md)
-[![Vietnamese](https://img.shields.io/badge/tiếng Việt-Nhấp để xem-blueviolet)](README_vn.md)
+[![Vietnamese](https://img.shields.io/badge/tiếng_Việt-Nhấp_để_xem-blueviolet)](README_vn.md)
 </div>
 
 # Awesome Gemini Robotics
