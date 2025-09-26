@@ -267,7 +267,7 @@ ER 1.5 adds improved semantic safety and awareness of physical constraints; you 
 
 ### 13) **Human-robot natural language**: “Clean up the table” 🧩
 
-![Table cleanup](assets/table_cleanup.jpg)
+![Table cleanup](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/image12_O0rW8PY.original.png)
 
 **Prompt**
 
