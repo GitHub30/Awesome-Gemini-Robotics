@@ -79,7 +79,7 @@ ER 1.5 returns precise, semantically grounded points; combine with your depth/po
 ### 2) Temporal reasoning on video: **What happened when?** 🧩
 
 
-<div><video controls src="https://storage.googleapis.com/gweb-developer-goog-blog-assets/original_videos/desk_organization.mp4" muted="false"></video></div>
+https://github.com/GitHub30/Awesome-Gemini-Robotics/raw/refs/heads/main/desk_organization.mp4
 
 
 **Prompt**
