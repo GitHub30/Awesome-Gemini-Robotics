@@ -72,7 +72,7 @@ The answer should follow the json format: [{"point": <point>, "label": <label1>}
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Pointing to Defined Objects
+### 2) Pointing to Defined Objects
 
 <img width="800" height="601" alt="image" src="https://github.com/user-attachments/assets/8bf517fa-a094-40c9-be65-6c7bedfde295" />
 
@@ -85,7 +85,7 @@ The answer should follow the json format: [{{"point": <point>, "label": <label1>
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Point to all instances of an object based on more abstract description (e.g. "fruit")
+### 3) Point to all instances of an object based on more abstract description (e.g. "fruit")
 
 <img width="798" height="597" alt="image" src="https://github.com/user-attachments/assets/974995c1-9a92-4c04-9e89-3bcbefdd22d8" />
 
@@ -98,7 +98,7 @@ The answer should follow the json format: [{"point": <point>, "label": <label1>}
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Point to all instances of an object
+### 4) Point to all instances of an object
 
 <img width="799" height="450" alt="image" src="https://github.com/user-attachments/assets/93382594-8156-43ff-9864-aa627346b2ae" />
 
@@ -116,7 +116,7 @@ The answer should follow the json format: [{"point": <point>, "label": <label1>}
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Pointing to certain parts of an object in serial
+### 5) Pointing to certain parts of an object in serial
 
 <img width="795" height="592" alt="image" src="https://github.com/user-attachments/assets/68c6bd2f-a064-43e4-bee3-a377a33d73c7" />
 
@@ -141,7 +141,7 @@ Point to the $part of the $object in the image. Return the answer as a json list
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Counting by Pointing
+### 6) Counting by Pointing
 
 <img width="793" height="820" alt="image" src="https://github.com/user-attachments/assets/2592ca4e-c1a9-4510-a251-c63dbbeaa52d" />
 
@@ -154,7 +154,7 @@ Return the answer in the format: [{"point": <point>, "label": <label1>}, ...]. T
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Pointing to Defined Objects in a GIF
+### 7) Pointing to Defined Objects in a GIF
 
 ![ダウンロード (1)](https://github.com/user-attachments/assets/635a748f-eae9-44c3-88b8-31627eec0ed8)
 
@@ -176,7 +176,7 @@ If no objects are found, return an empty JSON list [].
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) 2D Bounding boxes
+### 8) 2D Bounding boxes
 
 <img width="794" height="597" alt="image" src="https://github.com/user-attachments/assets/afaa8594-e682-4aaa-aa4c-62c468a66e49" />
 
@@ -191,7 +191,7 @@ The format should be as follows: [{"box_2d": [ymin, xmin, ymax, xmax], "label": 
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Simple Trajectory Planning
+### 9) Simple Trajectory Planning
 
 <img width="794" height="444" alt="image" src="https://github.com/user-attachments/assets/5c2f94dc-9b08-4e2b-b1d3-58ca55c6fb51" />
 
@@ -206,7 +206,7 @@ The points are in [y, x] format normalized to 0-1000.
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Path for Brushing Particles
+### 10) Path for Brushing Particles
 
 <img width="792" height="592" alt="image" src="https://github.com/user-attachments/assets/855c0a41-29f7-4d3b-a774-c22e4d726ac4" />
 
@@ -223,7 +223,7 @@ The points are in [y, x] format normalized to 0-1000.
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Obstacle-avoidance trajectory planning
+### 11) Obstacle-avoidance trajectory planning
 
 <img width="801" height="743" alt="image" src="https://github.com/user-attachments/assets/53cfab6e-db07-4eb7-b325-27d60da55eee" />
 
@@ -237,7 +237,7 @@ The points are in [y, x] format normalized to 0-1000.
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Item to remove to make room for laptop
+### 12) Item to remove to make room for laptop
 
 <img width="795" height="598" alt="image" src="https://github.com/user-attachments/assets/70a17400-d409-4ec9-8c23-4a2595f528ec" />
 
@@ -250,7 +250,7 @@ The answer should follow the json format: [{"point": <point>, "label": <label1>}
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Orchestrating: Packing a Lunch
+### 13) Orchestrating: Packing a Lunch
 
 <img width="1207" height="855" alt="image" src="https://github.com/user-attachments/assets/aab2f569-99fe-4d7e-ae34-159655729a59" />
 
@@ -262,7 +262,7 @@ Explain how to pack the lunch box and lunch bag. Point to each object that you r
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Empty electrical sockets
+### 14) Empty electrical sockets
 
 <img width="792" height="938" alt="image" src="https://github.com/user-attachments/assets/469d73df-3b01-48d6-b1f5-e39b62aa5133" />
 
@@ -275,7 +275,7 @@ The answer should follow the json format: [{"point": <point>, "label": <label1>}
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Limiting item lift (3LB limit)
+### 15) Limiting item lift (3LB limit)
 
 <img width="792" height="954" alt="image" src="https://github.com/user-attachments/assets/a45216e1-cac7-4217-b51e-98d0d23e8754" />
 
@@ -288,7 +288,7 @@ The answer should follow the json format: [{"point": <point>, "label": <label1>}
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Video Analysis
+### 16) Video Analysis
 
 https://github.com/user-attachments/assets/cc2b3c62-2ce6-4c7b-bcf8-968f000e37f5
 
@@ -300,7 +300,7 @@ Describe in detail each step of finishing the task. Breaking it down by timestam
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Video Analysis: Time Range
+### 17) Video Analysis: Time Range
 
 ```py
 conversation_history = [
@@ -374,7 +374,7 @@ Total processing time: 11.4140 seconds
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Finding the fourth row of shelves
+### 18) Finding the fourth row of shelves
 
 <img width="794" height="922" alt="image" src="https://github.com/user-attachments/assets/f7d26839-67a8-4215-b23d-e3eeb89ff11e" />
 
@@ -387,7 +387,7 @@ The format should be as follows: [{"box_2d": [ymin, xmin, ymax, xmax], "label": 
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Finding shelves with specific items
+### 19) Finding shelves with specific items
 
 <img width="794" height="942" alt="image" src="https://github.com/user-attachments/assets/95baca11-e7aa-485c-a927-0e392d9f6390" />
 
@@ -401,7 +401,7 @@ The format should be as follows: [{"box_2d": [ymin, xmin, ymax, xmax], "label": 
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Counting items with thinking
+### 20) Counting items with thinking
 
 <img width="960" height="600" alt="image" src="https://github.com/user-attachments/assets/d902b60a-006e-406a-8641-611240dd9f87" />
 
@@ -428,7 +428,7 @@ How many items are inside of the cart basket. Please share your reasoning.
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Finding shelves with specific items
+### 21) Finding shelves with specific items
 
 | ![initial_state_1](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/initial_state_1.png) | ![initial_state_2](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/initial_state_2.png) | ![initial_state_3](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/initial_state_3.png) | ![initial_state_4](https://storage.googleapis.com/generativeai-downloads/images/robotics/er-1-5-example-colab/initial_state_4.png) |
 |---|---|---|---|
@@ -455,7 +455,7 @@ Answer only with (1) yes or (2) no. Return the number (1) or (2) that best answe
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Zooming in on sections of an image for better readings
+### 22) Zooming in on sections of an image for better readings
 
 <img width="794" height="959" alt="image" src="https://github.com/user-attachments/assets/338a9381-8f71-4f61-a378-a57a9bc64f75" />
 
@@ -467,7 +467,7 @@ What is the air quality reading? Using the code execution feature, zoom in on th
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Segmentation with robot gripper and item
+### 23) Segmentation with robot gripper and item
 
 <img width="796" height="456" alt="image" src="https://github.com/user-attachments/assets/09403f45-f6e7-4fd1-8390-4614e3481e3a" />
 
@@ -490,7 +490,7 @@ The mask should be a base64 encoded PNG image where non-zero pixels indicate the
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Locate relevant objects
+### 24) Locate relevant objects
 
 <img width="793" height="504" alt="image" src="https://github.com/user-attachments/assets/69d4df26-a15d-4fcb-8ad7-d0b0cf9889b5" />
 
@@ -505,7 +505,7 @@ The points are in [y, x] format normalized to 0-1000.
 
 https://github.com/google-gemini/cookbook/blob/main/quickstarts/gemini-robotics-er.ipynb
 
-### 1) Kitchen scene: **Point-and-name objects** (2D points) ✅
+### 25) Kitchen scene: **Point-and-name objects** (2D points) ✅
 
 ![Kitchen pointing](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/unnamed-2_2.original.png)
 
@@ -522,7 +522,7 @@ ER 1.5 returns precise, semantically grounded points; combine with your depth/po
 
 ---
 
-### 2) Temporal reasoning on video: **What happened when?** 🧩
+### 26) Temporal reasoning on video: **What happened when?** 🧩
 
 
 
@@ -544,7 +544,7 @@ ER 1.5 can reason about **order, causality, and intervals** (e.g., “green mark
 
 ---
 
-### 3) Coffee maker: **Plan a closing trajectory** (multi-point path) ✅
+### 27) Coffee maker: **Plan a closing trajectory** (multi-point path) ✅
 
 ![Coffee-lid trajectory](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/image1_PCWZQMD.original.png)
 
@@ -562,7 +562,7 @@ Use outputs to seed your motion planner (smoothing, collision checks). ([Google 
 
 ---
 
-### 4) Coffee cleanup: **Where should I put the mug?** (affordance pointing) ✅
+### 28) Coffee cleanup: **Where should I put the mug?** (affordance pointing) ✅
 
 ![Put mug away](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/image12_O0rW8PY.original.png)
 
@@ -577,7 +577,7 @@ Great for **affordance-aware placement** after task completion. ([Google Develop
 
 ---
 
-### 5) **Trash sorting by local rules** (tool use + spatial grounding) 🧩
+### 29) **Trash sorting by local rules** (tool use + spatial grounding) 🧩
 
 https://github.com/user-attachments/assets/503b20d6-1995-4e71-9164-9a79d6bf6a4c
 
@@ -594,7 +594,7 @@ ER 1.5 can **call tools** (e.g., Google Search) and output **interleaved text + 
 
 ---
 
-### 6) **Re-organize my desk** from a reference photo (long-horizon plan) 🧩
+### 30) **Re-organize my desk** from a reference photo (long-horizon plan) 🧩
 
 **Prompt**
 
@@ -609,7 +609,7 @@ Demonstrates **agentic planning** with **spatial grounding** over many steps. ([
 
 ---
 
-### 7) **Make room for a laptop** (choose what to move) 🧩
+### 31) **Make room for a laptop** (choose what to move) 🧩
 
 ![Make room](https://ai.google.dev/gemini-api/docs/images/robotics/spatial-reasoning.png)
 
@@ -624,7 +624,7 @@ A canonical **orchestration** example from the docs—reason about constraints a
 
 ---
 
-### 8) **Pack a lunch** with spatially grounded instructions ✅
+### 32) **Pack a lunch** with spatially grounded instructions ✅
 
 ![Packing lunch](https://ai.google.dev/static/gemini-api/docs/images/robotics/packing-lunch.png)
 
@@ -641,7 +641,7 @@ Outputs a **multi-step plan** plus points you can render or convert into pick-an
 
 ---
 
-### 9) **Pick-and-place via your robot API** (function-calling) 🧩
+### 33) **Pick-and-place via your robot API** (function-calling) 🧩
 
 ![Blocks & bowl](https://ai.google.dev/gemini-api/docs/images/robotics/robot-api-example.png)
 
@@ -662,7 +662,7 @@ Docs show this pattern end-to-end (detect → plan → call your API). ([Google 
 
 ---
 
-### 10) **Move the red pen to the organizer** (trajectory planning) 🧩
+### 34) **Move the red pen to the organizer** (trajectory planning) 🧩
 
 ![Pen trajectory](https://ai.google.dev/gemini-api/docs/images/robotics/trajectories.png)
 
@@ -677,7 +677,7 @@ Great for **teaching-by-trajectory** and downstream spline fitting / time-parame
 
 ---
 
-### 11) **Laundry sorting by color** (multi-level thinking) 🧩
+### 35) **Laundry sorting by color** (multi-level thinking) 🧩
 
 [![](https://i.imgur.com/2fqyZh6.png)](https://www.youtube.com/watch?v=eDyXEh8XqjM&t=34s)
 
@@ -694,7 +694,7 @@ Official blog explains how Robotics 1.5/ER 1.5 think at task/subtask/micro-actio
 
 ---
 
-### 12) **Payload-aware pick** (safety & constraints) 🧩
+### 36) **Payload-aware pick** (safety & constraints) 🧩
 
 
 **Prompt**
@@ -710,7 +710,7 @@ ER 1.5 adds improved semantic safety and awareness of physical constraints; you 
 
 ---
 
-### 13) **Human-robot natural language**: “Clean up the table” 🧩
+### 37) **Human-robot natural language**: “Clean up the table” 🧩
 
 ![Table cleanup](https://storage.googleapis.com/gweb-developer-goog-blog-assets/images/image12_O0rW8PY.original.png)
 
@@ -727,7 +727,7 @@ ER 1.5 breaks down ambiguous commands into executable sub-goals and can call spe
 
 ---
 
-### 14) **Cross-embodiment planning** (robot-agnostic steps) 🧩
+### 38) **Cross-embodiment planning** (robot-agnostic steps) 🧩
 
 [![Embodiments](https://github.com/user-attachments/assets/919be470-810b-4974-8fe9-2784623aabd2)](https://www.youtube.com/watch?v=9FV5ZYytkOQ)
 
