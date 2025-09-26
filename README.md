@@ -284,7 +284,7 @@ ER 1.5 breaks down ambiguous commands into executable sub-goals and can call spe
 
 ### 14) **Cross-embodiment planning** (robot-agnostic steps) 🧩
 
-![Embodiments](assets/cross_embodiment.jpg)
+[![Embodiments](https://github.com/user-attachments/assets/919be470-810b-4974-8fe9-2784623aabd2)](https://www.youtube.com/watch?v=9FV5ZYytkOQ)
 
 **Prompt**
 
